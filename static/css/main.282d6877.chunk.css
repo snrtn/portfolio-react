@@ -1,0 +1,665 @@
+.snsContainer {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.snsContainer span {
+  font-size: 0.85rem;
+}
+.snsContainer .sns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.snsContainer .sns button:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.snsContainer .sns button:hover:before {
+  height: 100%;
+}
+.snsContainer .sns button:first-child:before {
+  background-color: #0a66c2;
+}
+.snsContainer .sns button .fab {
+  position: relative;
+  transition: 0.5s;
+}
+.snsContainer .sns button:hover .fab {
+  transform: rotateY(1turn);
+  color: #fff;
+  border-radius: 50%;
+}
+.snsContainer .sns button {
+  border: 1px solid #333;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #333;
+  text-align: center;
+  line-height: 25px;
+  font-size: 0.85rem;
+  margin-left: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #fff;
+}
+.faq-container {
+  margin-top: 50px;
+  padding-right: 2rem;
+  width: 45rem;
+}
+h2 {
+  font-size: 1.163rem;
+  font-weight: 700;
+}
+.accordion {
+  margin-top: 20px;
+}
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion .accordion-item button[aria-expanded="true"] {
+  border-bottom: 1px solid orange;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #000;
+  font-size: 0.913rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:focus,
+.accordion button:hover {
+  cursor: pointer;
+  color: orange;
+}
+.accordion button:focus:after,
+.accordion button:hover:after {
+  cursor: pointer;
+  color: orange;
+  border: 1px solid orange;
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+  font-size: 1.038rem;
+}
+.accordion button .faq-icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .faq-icon:before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .faq-icon:after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded="true"] {
+  color: orange;
+}
+.accordion button[aria-expanded="true"] .faq-icon:after {
+  width: 0;
+}
+.accordion button[aria-expanded="true"] + .accordion-content {
+  opacity: 1;
+  max-height: 100px;
+  transition: all 0.3s linear;
+  will-change: opacity, max-height;
+}
+.accordion button[aria-expanded="true"] .accordion-title {
+  font-weight: 700;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.25s linear, max-height 0.25s linear;
+  will-change: opacity, max-height;
+  display: flex;
+}
+.accordion .accordion-content a,
+.accordion .accordion-content p {
+  font-size: 0.913rem;
+  font-weight: 400;
+  line-height: 100px;
+}
+.accordion .accordion-content a {
+  display: inline-block;
+  width: 80px;
+  height: 100px;
+  text-align: center;
+  color: #4169e1;
+  font-weight: 700;
+}
+.ProfilTop {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.ProfilTop .container {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.ProfilTop .container .imgs {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 1.5s;
+  width: 50%;
+  height: inherit;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+.ProfilTop .container .text {
+  width: 50%;
+  height: inherit;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: justify;
+  letter-spacing: 1.06px;
+}
+.ProfilTop .container .text .profile {
+  width: inherit;
+  height: inherit;
+  display: inline-flex;
+}
+.ProfilTop .container .text .name {
+  height: 60px;
+  font-size: 40px;
+  line-height: 1.5;
+  font-style: italic;
+  font-weight: 700;
+}
+.ProfilTop .container .text .name_job {
+  display: inline-block;
+  vertical-align: top;
+  height: 60px;
+  overflow: hidden;
+  padding-right: 20px;
+  margin-left: 20px;
+}
+.ProfilTop .container .text .name_job_list {
+  animation-name: rolling;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+.ProfilTop .container .text .name_job_list li {
+  font-weight: 700;
+}
+.ProfilTop .container .text p {
+  width: 410px;
+  height: 300px;
+  font-weight: 300;
+  margin-top: 20px;
+  font-size: 1.038rem;
+}
+@keyframes rolling {
+  10% {
+    margin-top: 0;
+  }
+  to {
+    margin-top: -3em;
+  }
+}
+.ExperienceTop {
+  display: flex;
+  justify-content: center;
+  width: 900px;
+  height: 600px;
+  position: relative;
+  margin: 10px auto 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.ExperienceTop .container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #fff;
+}
+.ExperienceTop .container .backimg {
+  width: 100%;
+  height: 600px;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 1s;
+}
+.ExperienceTop .container .textbox {
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 390px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 50px 50px 0;
+  box-sizing: border-box;
+  color: #fff;
+  border-radius: 10px;
+}
+.ExperienceTop .container .textbox .title {
+  font-size: 32px;
+  font-weight: 500;
+  color: #fff;
+}
+.ExperienceTop .container .textbox .subtitle {
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.ExperienceTop .container .textbox .data {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+.ExperienceTop .container .textbox .mission {
+  margin-top: 10px;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+}
+.ExperienceTop .container .textbox .mission:after,
+.ExperienceTop .container .textbox .mission:before {
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 40%;
+  position: absolute;
+  top: 12px;
+}
+.ExperienceTop .container .textbox .mission:before {
+  left: 0;
+}
+.ExperienceTop .container .textbox .mission:after {
+  right: 0;
+}
+.ExperienceTop .container .textbox .dect {
+  margin-top: 10px;
+  font-weight: 300;
+  color: #fff;
+}
+.ExperienceTop .buttonbox {
+  position: absolute;
+  width: inherit;
+  height: 60px;
+  background-color: #fff;
+  bottom: 0;
+  box-sizing: border-box;
+  border-top: none;
+}
+.ExperienceTop .buttonbox .controle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.ExperienceTop .buttonbox .controle .left {
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.ExperienceTop .buttonbox .controle .right {
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.Formation {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s;
+}
+.Formation .container {
+  width: 900px;
+  height: 600px;
+  overflow: auto;
+  box-sizing: border-box;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+}
+.Formation .container::-webkit-scrollbar {
+  width: 15px;
+}
+.Formation .container::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border: none;
+}
+.Formation .container::-webkit-scrollbar-track {
+  background-color: #d3d3d3;
+  border: none;
+}
+.Formation .item12 {
+  scroll-snap-align: center;
+  width: 100%;
+}
+.FormationTop {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.FormationTop .box {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.FormationTop .headBox {
+  padding-top: 30px;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  background-image: url(https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.FormationTop .headBox h1 {
+  padding-top: 120px;
+  font-weight: 500;
+  font-size: 32px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.FormationTop .headBox p {
+  width: 800px;
+  text-align: center;
+  font-weight: 300;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #fff;
+  margin: 10px auto auto;
+}
+.FormationTop .headBox hr {
+  margin-top: 14px;
+  height: 0.2px;
+  background-color: #eee;
+}
+.FormationTop .headBox h2 {
+  padding-top: 14px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.FormationTop .textBox {
+  margin: auto;
+  width: 800px;
+  height: 750px;
+  color: #fff;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.FormationTop .textBox p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: justify;
+}
+.FormationBottom {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.FormationBottom .box2 {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: auto;
+}
+.FormationBottom .headBox2 {
+  padding-top: 30px;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  background-image: url(https://images.pexels.com/photos/785418/pexels-photo-785418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.FormationBottom .headBox2 h1 {
+  padding-top: 120px;
+  font-weight: 500;
+  font-size: 32px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.FormationBottom .headBox2 p {
+  width: 800px;
+  text-align: center;
+  font-weight: 300;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #fff;
+  margin: 10px auto auto;
+}
+.FormationBottom .headBox2 hr {
+  margin-top: 20px;
+  height: 0.2px;
+  background-color: #eee;
+}
+.FormationBottom .headBox2 h2 {
+  padding-top: 14px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.FormationBottom .textBox2 {
+  margin: auto;
+  width: 800px;
+  height: 750px;
+  color: #fff;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.FormationBottom .textBox2 p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: justify;
+}
+.Information {
+  width: 900px;
+  height: 600px;
+  margin: 10px auto 0;
+}
+.Information .gallery {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  height: 600px;
+}
+.Information .gallery li {
+  flex: 1 1;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.Information .gallery li:last-child {
+  border-right: none;
+}
+.Information .gallery li:first-child {
+  background: url(https://images.pexels.com/photos/7988956/pexels-photo-7988956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+    no-repeat 50%;
+}
+.Information .gallery li:nth-child(2) {
+  background: url(https://www.tourisme-bresil.com/wp-content/uploads/adobestock-215533187-1280x800.jpeg)
+    no-repeat 50%;
+}
+.Information .gallery li:nth-child(3) {
+  background: url(https://images.pexels.com/photos/7045526/pexels-photo-7045526.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+    no-repeat 50%;
+}
+.Information .gallery:hover li {
+  flex: 1 1;
+}
+.Information .gallery li:hover {
+  flex: 3 1;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+.Information .content_info {
+  position: absolute;
+  background-color: #fff;
+  text-align: center;
+  height: 300px;
+  bottom: -215px;
+  transition: 0.5s;
+  box-sizing: border-box;
+  padding: 50px 20px 20px;
+  width: 100%;
+}
+.Information .content_info h2 {
+  font-size: 22px;
+  font-weight: 700;
+  z-index: 5;
+}
+.Information .content_info p {
+  z-index: 5;
+  padding-top: 60px;
+  font-weight: 300;
+  width: 400px;
+  text-align: justify;
+  margin: auto;
+}
+.Information .gallery li:hover .content_info {
+  bottom: 0;
+  transition-delay: 0.5s;
+}
+.Information .content_info:before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  top: -2px;
+  transform-origin: left bottom;
+  transform: rotate(-3deg) scale(1.3);
+}
+.contact-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1030px;
+  height: 600px;
+}
+.contact-container .imgs img {
+  width: 500px;
+  height: 650px;
+  margin-right: 30px;
+}
+.contact-container .contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-container .contact-wrapper h1 {
+  margin-bottom: 50px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.contact-container .contact-wrapper .name-container input {
+  width: 500px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.163rem;
+  font-weight: 700;
+  border-radius: 8px;
+}
+.contact-container .contact-wrapper .email-container {
+  margin: 20px 0;
+}
+.contact-container .contact-wrapper .email-container input {
+  width: 500px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.163rem;
+  font-weight: 700;
+  border-radius: 8px;
+}
+.contact-container .contact-wrapper .text-container textarea {
+  width: 500px;
+  font-size: 1.163rem;
+  padding: 20px;
+  border: none;
+  font-weight: 700;
+  border-radius: 8px;
+}
+.contact-container .contact-wrapper .btn-container {
+  margin-top: 20px;
+}
+.contact-container .contact-wrapper .btn-container .btn {
+  width: 200px;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: rgba(95, 158, 160, 0.9);
+  color: #fff;
+  outline: none;
+  font-size: 1.163rem;
+  border: none;
+  border-radius: 8px;
+}
+/*# sourceMappingURL=main.282d6877.chunk.css.map */
